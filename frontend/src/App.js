@@ -3,6 +3,7 @@ import {BrowserRouter as Router,Route} from 'react-router-dom'
 import { ChakraProvider } from '@chakra-ui/react'
 
 import Producto from './components/producto';
+import Carrito from './components/carrito';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         
         <div>
           <Route exact path="/" component={Producto}></Route>
+          <Route exact path="/carrito" component={Carrito}></Route>
         </div>
         
       </div>

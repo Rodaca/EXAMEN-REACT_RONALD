@@ -1,30 +1,18 @@
+import React from 'react';
+import { useLocation } from 'react-router-dom';
+
+function Carrito() {
+  const location = useLocation();
+  const producto = location.state.producto;
 
 
-export default function Carrito(){
-    
-        const { isOpen, onOpen, onClose } = useDisclosure()
-        return (
-          <>
-            <Button onClick={onOpen}>Open Modal</Button>
-      
-            <Modal isOpen={isOpen} onClose={onClose}>
-              <ModalOverlay />
-              <ModalContent>
-                <ModalHeader>Modal Title</ModalHeader>
-                <ModalCloseButton />
-                <ModalBody>
-                  <Lorem count={2} />
-                </ModalBody>
-      
-                <ModalFooter>
-                  <Button colorScheme='blue' mr={3} onClick={onClose}>
-                    Close
-                  </Button>
-                  <Button variant='ghost'>Secondary Action</Button>
-                </ModalFooter>
-              </ModalContent>
-            </Modal>
-          </>
-        )
-    
+
+  return (
+    <div>
+      <h1>Detalles del Producto {console.log(producto)}</h1>
+      {}
+    </div>
+  );
 }
+
+export default Carrito;
